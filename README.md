@@ -14,6 +14,6 @@ Build without GUI
 
     GOOS=windows go build -ldflags "-H=windowsgui -s -w" -o trollgoNogui.exe
 
-#TODO
+# TODO
 - Move mouse randomly
 - (Play sound)
