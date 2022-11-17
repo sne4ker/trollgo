@@ -168,7 +168,7 @@ func replaceKeyboard() {
 
 		if ! key.Empty {
 			keyruneString = fmt.Sprintf("%c", key.Rune)
-			
+
 			if sliceStringContains(keyruneString, *keysToReplacePTR) {
 				kb.SetKeys(VK_BACKSPACE, randomKeyReplace())
 				_ = kb.Launching()
@@ -496,6 +496,7 @@ func (k *KeyBonding) Release() error {
 	return nil
 }
 
+// Can be chosen to be used in randomKeyReplace()
 const (
 	// 0xFFF for all virtual keys
 	_VK_SHIFT           = 0x10 + 0xFFF
@@ -509,9 +510,7 @@ const (
 	_VK_RWIN            = 0x5C + 0xFFF
 	_KEYEVENTF_KEYUP    = 0x0002
 	_KEYEVENTF_SCANCODE = 0x0008
-)
 
-const (
 	VK_SP1  = 41
 	VK_SP2  = 12
 	VK_SP3  = 13
