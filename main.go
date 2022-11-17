@@ -2,7 +2,6 @@ package main
 
 import (
 	"crypto/rand"
-	"fmt"
 	"math/big"
 	"strings"
 	"syscall"
@@ -167,7 +166,7 @@ func replaceKeyboard() {
 		key := kl.GetKey()
 
 		if ! key.Empty {
-			keyruneString = fmt.Sprintf("%c", key.Rune)
+			keyruneString = string(key.Rune)
 
 			if sliceStringContains(keyruneString, *keysToReplacePTR) {
 				kb.SetKeys(VK_BACKSPACE, randomKeyReplace())
