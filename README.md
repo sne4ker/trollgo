@@ -1,4 +1,5 @@
 # trollgo
+Trollgo periodically blocks mouse movements, modifies keyboard inputs and swaps mouse buttons
 # Build from source
 Clone this repository and move into the directory
 
@@ -12,3 +13,7 @@ Build with GUI
 Build without GUI
 
     GOOS=windows go build -ldflags "-H=windowsgui -s -w" -o trollgoNogui.exe
+
+#TODO
+- Move mouse randomly
+- (Play sound)
